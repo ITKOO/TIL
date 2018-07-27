@@ -3,28 +3,25 @@ TIL - Spring
 
 
 
-----------
-
-
 @ITKOO<br>
 Spring MVC Project Setting
 -------------
-- **Topic** :  Spring MVC Framework ÇÁ·ÎÁ§Æ® ¼³Á¤ÇÏ±â
-- **ÀÛ¾÷È¯°æ** :  Eclipse Oxygen
-- **½ÃÀÛÀÏ** :  2018.07.27~
+- **Topic** :  Spring MVC Framework í”„ë¡œì íŠ¸ ì„¤ì •í•˜ê¸°
+- **ì‘ì—…í™˜ê²½** :  Eclipse Oxygen
+- **ì‹œì‘ì¼** :  2018.07.27~
 
-    #### <i class="icon-folder-open"></i> ¼ø¼­
+    #### <i class="icon-folder-open"></i> ìˆœì„œ
     
-	1. Spring Legacy Project »ı¼º
-	    -  ÇÁ·ÎÁ§Æ® ÀÌ¸§ ¼³Á¤(Ã¹±ÛÀÚ ´ë¹®ÀÚ ÃßÃµ)
-	    -  package ÀÌ¸§ ¼³Á¤
+	1. Spring Legacy Project ìƒì„±
+	    -  í”„ë¡œì íŠ¸ ì´ë¦„ ì„¤ì •(ì²«ê¸€ì ëŒ€ë¬¸ì ì¶”ì²œ)
+	    -  package ì´ë¦„ ì„¤ì •
 
-			ex) com.itkoo.web -> ¿©±â¼­ webÀÌ context ºÎºĞ
+			ex) com.itkoo.web -> ì—¬ê¸°ì„œ webì´ context ë¶€ë¶„
 			
-	2. ÇÁ·ÎÁ§Æ® ¾È¿¡ ÀÖ´Â pom.xml ºÎºĞ¿¡ 
-		ÀÚ¹Ù ¹öÀü ¹× ½ºÇÁ¸µ ÇÁ·¹ÀÓ ¿öÅ© versionÀ» Á¶Á¤
+	2. í”„ë¡œì íŠ¸ ì•ˆì— ìˆëŠ” pom.xml ë¶€ë¶„ì— 
+		ìë°” ë²„ì „ ë° ìŠ¤í”„ë§ í”„ë ˆì„ ì›Œí¬ versionì„ ì¡°ì •
 		
-	3. pom.xml ºÎºĞ¿¡ ÇÊ¿äÇÑ library dependency Ãß°¡
+	3. pom.xml ë¶€ë¶„ì— í•„ìš”í•œ library dependency ì¶”ê°€
 	
 	 -  mysql
 	 -  spring-jdbc
@@ -58,8 +55,8 @@ Spring MVC Project Setting
                 <version>1.3.0</version>
             </dependency> `  
 
-  4.  ÇÑ±ÛÀÌ ±úÁö´Â Çö»óÀ» ¸·±â À§ÇØ filter, filter-mapping Ãß°¡
-		( jspÀÇ request.setCharacterEncoding("UTF-8"); °ú µ¿ÀÏÇÑ ±â´É )
+  4.  í•œê¸€ì´ ê¹¨ì§€ëŠ” í˜„ìƒì„ ë§‰ê¸° ìœ„í•´ filter, filter-mapping ì¶”ê°€
+		( jspì˜ request.setCharacterEncoding("UTF-8"); ê³¼ ë™ì¼í•œ ê¸°ëŠ¥ )
 		
 		` <filter>
             <filter-name>encodingFilter</filter-name>
@@ -75,38 +72,38 @@ Spring MVC Project Setting
             <url-pattern>/*</url-pattern>
       </filter-mapping> `
 		
- 5.  DB°ü·Ã ¼¼ÆÃ -> root-context.xml ÆÄÀÏ¿¡ 
-     -  dataSource( DBMS °ü·Ã Á¤º¸µé, id, password µî )
-	 -  sqlSession( mybatis ¿Í °ü·Ã - ½ÇÁ¦ ÇÁ·ÎÁ§Æ®¿Í °ü·Ã)
-	 -  sqlSessionFactory( sqlSession ¼¼ÆÃ¿¡ µµ¿òÀ» ÁÜ )
+ 5.  DBê´€ë ¨ ì„¸íŒ… -> root-context.xml íŒŒì¼ì— 
+     -  dataSource( DBMS ê´€ë ¨ ì •ë³´ë“¤, id, password ë“± )
+	 -  sqlSession( mybatis ì™€ ê´€ë ¨ - ì‹¤ì œ í”„ë¡œì íŠ¸ì™€ ê´€ë ¨)
+	 -  sqlSessionFactory( sqlSession ì„¸íŒ…ì— ë„ì›€ì„ ì¤Œ )
 	 
-		 	`<bean id="dataSource"
+	`<bean id="dataSource"
             class="org.springframework.jdbc.datasource.DriverManagerDataSource">
             <property name="driverClassName" value="com.mysql.jdbc.Driver" />
             <property name="url" value="jdbc:mysql://localhost:3306/mydb? 
             useUnicode=true&;characterEncoding=UTF-8" />
             <property name="username" value="root" />
             <property name="password" value="1234" />
-      </bean> 
-			`
-` <bean id="sqlSessionFactory"
+      </bean>` 
+			
+      `<bean id="sqlSessionFactory"
             class="org.mybatis.spring.SqlSessionFactoryBean">
             <property name="dataSource" ref="dataSource" />
             <property name="configLocation" value="classpath:/mybatis-config.xml" />
-            <property name="mapperLocations" value="classpath:/mappers/**/*Mapper*.xml" />
-			`
-`  <bean id="sqlSession" 
-class="org.mybatis.spring.SqlSessionTemplate" 
-destroy-method="clearCache">
-      <constructor-arg ref="sqlSessionFactory"/>
-      </bean> 
-			`
+            <property name="mapperLocations" value="classpath:/mappers/**/*Mapper*.xml" />`
+			
+	` <bean id="sqlSession" 
+	class="org.mybatis.spring.SqlSessionTemplate" 
+	destroy-method="clearCache">
+	      <constructor-arg ref="sqlSessionFactory"/>
+	      </bean>` 
+				
 
-6.  root-context¿¡ property value ¿¡ ½á³õÀº Æú´õ ÀÌ¸§¸íÀ¸·Î 
-	src/main/resources ¹Ø¿¡ Æú´õ »ı¼º
-	ex) src/main/resources/mappers Æú´õ »ı¼º
+6.  root-contextì— property value ì— ì¨ë†“ì€ í´ë” ì´ë¦„ëª…ìœ¼ë¡œ 
+	src/main/resources ë°‘ì— í´ë” ìƒì„±
+	ex) src/main/resources/mappers í´ë” ìƒì„±
 
-7.  src/main/resources ¹Ø¿¡ mybatis-config.xml ÆÄÀÏ »ı¼º ¹× ÄÚµå ³Ö±â
+7.  src/main/resources ë°‘ì— mybatis-config.xml íŒŒì¼ ìƒì„± ë° ì½”ë“œ ë„£ê¸°
 
 		`<configuration>
 		 <typeAliases>
@@ -117,31 +114,31 @@ destroy-method="clearCache">
 
 
 
-#### <i class="icon-refresh"></i> ¸¸¾à ÅèÄ¹ÀÌ ¹®Á¦ÀÌ°Å³ª, µğÆæ´ø½Ã °Çµå·ÈÀ»¶§ ¿¡·¯°¡ ³­´Ù!
+#### <i class="icon-refresh"></i> ë§Œì•½ í†°ìº£ì´ ë¬¸ì œì´ê±°ë‚˜, ë””íœë˜ì‹œ ê±´ë“œë ¸ì„ë•Œ ì—ëŸ¬ê°€ ë‚œë‹¤!
 
--> ÀÌÅ¬¸³½º¸¦ ³ª°£ ÈÄ C:\Users\Mirim\.m2\repository ¿©±â ¾È¿¡ ÀÖ´Â°Íµé ¸ğµÎ »èÁ¦ ÈÄ ÀÌÅ¬¸³½º ´Ù½Ã ½ÇÇà
+-> ì´í´ë¦½ìŠ¤ë¥¼ ë‚˜ê°„ í›„ C:\Users\Mirim\.m2\repository ì—¬ê¸° ì•ˆì— ìˆëŠ”ê²ƒë“¤ ëª¨ë‘ ì‚­ì œ í›„ ì´í´ë¦½ìŠ¤ ë‹¤ì‹œ ì‹¤í–‰
 
 
 
 
 ### MySQL DB Tables
-1. DB»ç¿ëÇÏ±â 
-`use mydb;`
--> ¿©±â¼­ mydb´Â DB ÀÌ¸§
+1. DBì‚¬ìš©í•˜ê¸°<br> 
+`use mydb;`<br>
+-> ì—¬ê¸°ì„œ mydbëŠ” DB ì´ë¦„
 
-2. Å×ÀÌºí »ı¼º
+2. í…Œì´ë¸” ìƒì„±<br>
 `create table user(
 id varchar(50) not null primary key,
 pw varchar(50) not null,
 name varchar(100) not null
 );`
-3. µ¥ÀÌÅÍ »ğÀÔ
-`insert into user values('aaa', 'aaa', '°¡°¡°¡');
-insert into user values('bbb', 'bbb', '³ª³ª³ª');`
+3. ë°ì´í„° ì‚½ì…<br>
+`insert into user values('aaa', 'aaa', 'ê°€ê°€ê°€');
+insert into user values('bbb', 'bbb', 'ë‚˜ë‚˜ë‚˜');`<br>
 
-	id    | pw | name
-	-------- | ---
-	aaa | aaa | °¡°¡°¡
-	bbb    | bbb | ³ª³ª³ª
+	id    | pw | name<br>
+	-------- | ---<br>
+	aaa | aaa | ê°€ê°€ê°€<br>
+	bbb    | bbb | ë‚˜ë‚˜ë‚˜<br>
 
 
