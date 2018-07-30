@@ -98,7 +98,7 @@ Spring MVC Project Setting
 	</bean>`
 				
 
-	**6.  root-context에 property value 에 써놓은 폴더 이름명으로 
+	**6.  root-context.xml에 sqlSessionFactory밑 mapperLocations property value 에 써놓은 폴더 이름명으로 
 	src/main/resources 밑에 폴더 생성**<br>
 	ex) src/main/resources/mappers 폴더 생성
 
