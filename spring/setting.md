@@ -55,7 +55,7 @@ Spring MVC Project Setting
                 <version>1.3.0</version>
             </dependency> `  
 
-  	**4.  한글이 깨지는 현상을 막기 위해 filter, filter-mapping 추가**
+  	**4.  한글이 깨지는 현상을 막기 위해 web.xml에 filter, filter-mapping 추가**
 		( jsp의 request.setCharacterEncoding("UTF-8"); 과 동일한 기능 )
 		
 	`<filter>
