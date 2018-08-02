@@ -18,8 +18,10 @@ Spring MVC Project Setting
 
 			ex) com.itkoo.web -> 여기서 web이 context 부분
 			
+			
 	**2. 프로젝트 안에 있는 pom.xml 부분에 
 		자바 버전 및 스프링 프레임 워크 version을 조정**
+		
 		
 	**3. pom.xml 부분에 필요한 library dependency 추가**
 	
@@ -28,50 +30,52 @@ Spring MVC Project Setting
 	 -  mybatis
 	 - mybatis-spring
 	 
-		 `  <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>5.1.46</version>
-            </dependency> `
-            
-		 `   <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-jdbc</artifactId>
-                <version>${org.springframework-version}</version>
-            </dependency> `
-	  
-		 `    <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
-            <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis</artifactId>
-                <version>3.4.0</version>
-            </dependency> `    
-	            
-		 `   <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
-            <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis-spring</artifactId>
-                <version>1.3.0</version>
-            </dependency> `  
+	```sh
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>5.1.46</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-jdbc</artifactId>
+		    <version>${org.springframework-version}</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis</artifactId>
+		    <version>3.4.0</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis-spring</artifactId>
+		    <version>1.3.0</version>
+		</dependency>               
+	```	
+
 
   	**4.  한글이 깨지는 현상을 막기 위해 web.xml에 filter, filter-mapping 추가**
 		( jsp의 request.setCharacterEncoding("UTF-8"); 과 동일한 기능 )
-		
-	`<filter>
-            <filter-name>encodingFilter</filter-name>
-            <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
-	    <init-param>
-                  <param-name>encoding</param-name>
-                  <param-value>UTF-8</param-value>
-            </init-param>
-      </filter>`
-      
-     `<filter-mapping>
-            <filter-name>encodingFilter</filter-name>
-            <url-pattern>/*</url-pattern>
-      </filter-mapping>`
-		
+	```sh	
+	<filter> 
+		<filter-name>encodingFilter</filter-name> 
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class> 
+		<init-param> <param-name>encoding</param-name> 
+		<param-value>UTF-8</param-value> </init-param> 
+	</filter>
+
+	<filter-mapping> 
+		<filter-name>encodingFilter</filter-name> 
+		<url-pattern>/*</url-pattern> 
+	</filter-mapping>
+	```
+	
  	**5.  DB관련 세팅 -> root-context.xml 파일에** 
      -  dataSource( DBMS 관련 정보들, id, password 등 )
 	 -  sqlSession( mybatis 와 관련 - 실제 프로젝트와 관련)
@@ -105,6 +109,7 @@ Spring MVC Project Setting
 	**6.  root-context.xml에 sqlSessionFactory밑 mapperLocations property value 에 써놓은 폴더 이름명으로 
 	src/main/resources 밑에 폴더 생성**<br>
 	ex) src/main/resources/mappers 폴더 생성
+	
 
 	**7.  src/main/resources 밑에 mybatis-config.xml 파일 생성 및 코드 넣기**
 
