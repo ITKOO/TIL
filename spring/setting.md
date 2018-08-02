@@ -77,26 +77,30 @@ Spring MVC Project Setting
 	 -  sqlSession( mybatis 와 관련 - 실제 프로젝트와 관련)
 	 -  sqlSessionFactory( sqlSession 세팅에 도움을 줌 )
 	 
-	`<bean id="dataSource"
-            class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-            <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-            <property name="url" value="jdbc:mysql://localhost:3306/mydb? 
-            useUnicode=true&;characterEncoding=UTF-8" />
-            <property name="username" value="root" />
-            <property name="password" value="1234" />
-      </bean>`
-			
-      <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-            <property name="dataSource" ref="dataSource" />
-            <property name="configLocation" value="classpath:/mybatis-config.xml" />
-            <property name="mapperLocations" value="classpath:/mappers/**/*Mapper*.xml" />
-			
-	`<bean id="sqlSession" 
-	class="org.mybatis.spring.SqlSessionTemplate" 
+	 ```sh
+	 <bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/mydb?useUnicode=true&amp;characterEncoding=UTF-8" />
+		<property name="username" value="root" />
+		<property name="password" value="1234" />
+	</bean>
+
+	<bean id="sqlSessionFactory"
+		class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:/mybatis-config.xml" />
+		<property name="mapperLocations" value="classpath:/mappers/**/*Mapper*.xml" />
+	</bean>
+	
+	<bean id="sqlSession"
+	class="org.mybatis.spring.SqlSessionTemplate"
 	destroy-method="clearCache">
-	      <constructor-arg ref="sqlSessionFactory"/>
-	</bean>`
-				
+	<constructor-arg ref="sqlSessionFactory"/>
+	</bean>	
+	 ```
+		
 
 	**6.  root-context.xml에 sqlSessionFactory밑 mapperLocations property value 에 써놓은 폴더 이름명으로 
 	src/main/resources 밑에 폴더 생성**<br>
