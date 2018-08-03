@@ -31,6 +31,7 @@ Spring MVC Project Setting
 	 - mybatis-spring
 	 
 	```sh
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
 		    <groupId>mysql</groupId>
 		    <artifactId>mysql-connector-java</artifactId>
