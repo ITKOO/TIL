@@ -2,48 +2,48 @@
 
 TIL - Git
 
-Git ±âº»
+Git ê¸°ë³¸
 ===================
 
-#### ¼³¸í
+#### ì„¤ëª…
 
-**1. gitÀÌ¶õ**
+**1. gitì´ëž€**
 
-	    ¡Ü  ¿©·¯¸íÀÇ °³¹ßÀÚ(ºÐ»ê)°¡ Æ¯Á¤ ÇÁ·ÎÁ§Æ®¸¦ ÀÚ½ÅÀÇ ÄÄÇ»ÅÍ·Î Çù¾÷ÇÏ¿© °³¹ßÇÏ¸é¼­ ¹öÀüÀ» °ü¸®ÇÒ ¼ö ÀÖ´Â ½Ã½ºÅÛ
+	    â—  ì—¬ëŸ¬ëª…ì˜ ê°œë°œìž(ë¶„ì‚°)ê°€ íŠ¹ì • í”„ë¡œì íŠ¸ë¥¼ ìžì‹ ì˜ ì»´í“¨í„°ë¡œ í˜‘ì—…í•˜ì—¬ ê°œë°œí•˜ë©´ì„œ ë²„ì „ì„ ê´€ë¦¬í•  ìˆ˜ ìžˆëŠ” ì‹œìŠ¤í…œ
       
-        ¡Ü  ÇÁ·Î±×·¥ µîÀÇ ¼Ò½º ÄÚµå °ü¸®¸¦ À§ÇÑ ºÐ»ê ¹öÀü °ü¸® ½Ã½ºÅÛ
+        â—  í”„ë¡œê·¸ëž¨ ë“±ì˜ ì†ŒìŠ¤ ì½”ë“œ ê´€ë¦¬ë¥¼ ìœ„í•œ ë¶„ì‚° ë²„ì „ ê´€ë¦¬ ì‹œìŠ¤í…œ
       
   
 #  
-**2. »ç¿ë¹ý**
+**2. ì‚¬ìš©ë²•**
 
-```sh
-*//Ã³À½¿¡ gitÀ» Ãß°¡ÇÒ ¶§* 
+```
+//ì²˜ìŒì— gitì„ ì¶”ê°€í•  ë•Œ
 
 git init
 
-git status  *// »¡°£»ö ---> ¾ÆÁ÷ ¿Ã¶ó°¡Áö ¾ÊÀº »óÅÂ*
+git status  // ë¹¨ê°„ìƒ‰ ---> ì•„ì§ ì˜¬ë¼ê°€ì§€ ì•Šì€ ìƒíƒœ
 
 
 
-git add .  *// ¸ðµçÆÄÀÏÀ» git¿¡ Ãß°¡ÇÏ´Â °Í*
+git add . // ëª¨ë“ íŒŒì¼ì„ gitì— ì¶”ê°€í•˜ëŠ” ê²ƒ
 
-git status  *// ÃÊ·Ï»ö ---> Àß¿Ã¶ó°£ »óÅÂ*
+git status  // ì´ˆë¡ìƒ‰ ---> ìž˜ì˜¬ë¼ê°„ ìƒíƒœ
 
-git commit -m "Pratice"  *// ³»°¡ ¾î¶°ÇÑ °ÍÀ» Çß´ÂÁö ¾Ë·ÁÁÖ´Â, ex) README.mdÆÄÀÏÀ» ¼öÁ¤Çß´Ù¸é commit message´Â "Update README.md"* 
+git commit -m "Pratice"  // ë‚´ê°€ ì–´ë– í•œ ê²ƒì„ í–ˆëŠ”ì§€ ì•Œë ¤ì£¼ëŠ”, ex) README.mdíŒŒì¼ì„ ìˆ˜ì •í–ˆë‹¤ë©´ commit messageëŠ” "Update README.md" 
 
-git config --global user.email "itkoo2000@gmail.com"  *// git°ú github °èÁ¤À» ¿¬µ¿*
+git config --global user.email "itkoo2000@gmail.com"  // gitê³¼ github ê³„ì •ì„ ì—°ë™
 
 git config --global user.name "ITKOO"
 
-git remote add origin https://github.com/ITKOO/php-codeigniter-study.git    *// git°ú github¿¡ ÀÖ´Â ·¹ÆÄÁöÅä¸®¸¦ ¿¬µ¿½ÃÄÑÁÖ´Â °Í*
+git remote add origin https://github.com/ITKOO/php-codeigniter-study.git    // gitê³¼ githubì— ìžˆëŠ” ë ˆíŒŒì§€í† ë¦¬ë¥¼ ì—°ë™ì‹œì¼œì£¼ëŠ” ê²ƒ
 
-git push -u origin master  *// git¿¡ addÇß´ø ÆÄÀÏµéÀ» github ·¹ÆÄÁöÅä¸®¿¡ Çª½¬ÇØÁÖ´Â ÀÛ¾÷*
+git push -u origin master  // gitì— addí–ˆë˜ íŒŒì¼ë“¤ì„ github ë ˆíŒŒì§€í† ë¦¬ì— í‘¸ì‰¬í•´ì£¼ëŠ” ìž‘ì—…
 
 
-//¼öÁ¤ÇÑ ÇÁ·ÎÁ§Æ®¸¦ git¿¡ ¿Ã¸± ¶§
+//ìˆ˜ì •í•œ í”„ë¡œì íŠ¸ë¥¼ gitì— ì˜¬ë¦´ ë•Œ
 
-git status  *// »¡°£»ö , ±× ÄÚµå µéÀº ³»°¡ °íÄ£ ³»¿ë ´ã°ÜÀÖÀ½.*
+git status  // ë¹¨ê°„ìƒ‰ , ê·¸ ì½”ë“œ ë“¤ì€ ë‚´ê°€ ê³ ì¹œ ë‚´ìš© ë‹´ê²¨ìžˆìŒ.
 
 git add . 
 
@@ -53,7 +53,7 @@ git push origin master
 
 ```
 
-**3. Âü°í ÇÏ¸é ÁÁÀ» »çÀÌÆ®**
+**3. ì°¸ê³  í•˜ë©´ ì¢‹ì„ ì‚¬ì´íŠ¸**
 
 >https://rogerdudler.github.io/git-guide/index.ko.html
 
