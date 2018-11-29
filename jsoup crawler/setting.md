@@ -2,30 +2,49 @@
 
 TIL - jsoup crawler
 
-JsoupÀ» ÀÌ¿ëÇÑ Å©·Ñ·¯
+Jsoupì„ ì´ìš©í•œ í¬ë¡¤ëŸ¬
 ===================
 
-- **Topic** :  Spring¸¦ ÀÌ¿ëÇÑ Å©·Ñ·¯ Á¦ÀÛÀ» À§ÇÑ ¼¼ÆÃ°úÁ¤
-- **½ÃÀÛÀÏ** :  2018.11.28~
+- **Topic** :  Springë¥¼ ì´ìš©í•œ í¬ë¡¤ëŸ¬ ì œì‘ì„ ìœ„í•œ ì„¸íŒ…ê³¼ì •
+- **ì‹œì‘ì¼** :  2018.11.28~
 
-#### ¼³¸í
+#### ì„¤ëª…
 
-**1. Spring Framework ¼³Ä¡**
+**1. Spring Framework ì„¤ì¹˜**
 
-	    ¡Ü  https://spring.io/tools3/sts/all/ ¿¡ Á¢¼ÓÇØ Spring Tool Suite¸¦ ¼³Ä¡
+	    â—  https://spring.io/tools3/sts/all/ ì— ì ‘ì†í•´ Spring Tool Suiteë¥¼ ì„¤ì¹˜
       
-	    ¡Ü  ¾ĞÃàÇØÁ¦ ÈÄ È¯°æ¼¼ÆÃ(Å×¸¶, ÆùÆ® ,,,) - ¹İµå½Ã Java°¡ ±âº»¼¼ÆÃµÇ¾îÀÖ¾î¾ßÇÔ
+	    â—  ì••ì¶•í•´ì œ í›„ í™˜ê²½ì„¸íŒ…(í…Œë§ˆ, í°íŠ¸ ,,,) - ë°˜ë“œì‹œ Javaê°€ ê¸°ë³¸ì„¸íŒ…ë˜ì–´ìˆì–´ì•¼í•¨
 	    
-	    ¡Ü  STS¿¡¼­ Spring Starter Project¸¦ »ı¼ºÇÑ ÈÄ src/main/java ¹Ø com.example.XXX ¹Ø¿¡ ÄÚµåÀÛ¼º
+	    â—  STSì—ì„œ Spring Starter Projectë¥¼ ìƒì„±í•œ í›„ src/main/java ë°‘ com.example.XXX ë°‘ì— ì½”ë“œì‘ì„±
 	    
 ![image](https://user-images.githubusercontent.com/31758135/49138651-19691980-f333-11e8-910a-fe92f7c2c359.png)
 
+      
+Q. Springì´ë€?
+	    
+â—  Javaí”Œë«í¼ì„ ìœ„í•œ ì˜¤í”ˆì†ŒìŠ¤ ì–´í”Œë¦¬ì¼€ì´ì…˜ í”„ë ˆì„ì›Œí¬(Famework)
+	    
+â—  Java ì—”í„°í”„ë¼ì´ì¦ˆ ê°œë°œì„ í¸í•˜ê²Œ í•´ì£¼ëŠ” ì˜¤í”ˆì†ŒìŠ¤ ê²½ëŸ‰ê¸‰ ì–´í”Œë¦¬ì¼€ì´ì…˜ 
+
+	    
 
 
 #  
-**2. Jsoup ´Ù¿î·Îµå**
+**2. Jsoup ë‹¤ìš´ë¡œë“œ**
 
-	¡Ü  https://jsoup.org/download ¿¡ Á¢¼ÓÇØ jsoup dependency¸¦ º¹»ç
+	â—  https://jsoup.org/download ì— ì ‘ì†í•´ jsoup dependencyë¥¼ ë³µì‚¬
 	
-	¡Ü  ¸¸µé¾î µĞ Starter Project pom.xml¿¡ º¹»çÇÑ dependency ºÙ¿©³Ö±â
+	â—  ë§Œë“¤ì–´ ë‘” Starter Project pom.xmlì— ë³µì‚¬í•œ dependency ë¶™ì—¬ë„£ê¸°
+	
+      
 ![image](https://user-images.githubusercontent.com/31758135/49138622-07877680-f333-11e8-99cc-baacab4c2449.png)
+
+
+Q. jsoupì´ë€?
+	    
+â—   jsoupì€ java html parserë¡œì¨ ë°ì´í„°ë¥¼ ì¶”ì¶œí•˜ê³  ì¡°ì‘í•˜ê¸° ìœ„í•´ ì‚¬ìš©í•˜ëŠ” ë¼ì´ë¸ŒëŸ¬ë¦¬,
+
+DOM, CSS êµ¬ì¡°ë¥¼ ì´ìš©, jqueryì™€ ë¹„ìŠ·í•œ ë©”ì„œë“œë¥¼ ê°€ì§€ê³  ìˆìŒ.(HTML5 ì§€ì›)
+      
+	    
