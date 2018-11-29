@@ -39,26 +39,6 @@
 
 <br>
 
-**cf)  ITKOO의 Driver-Insurance-CrawlerSample 레파지토리를 보면 크롤링을 했던데, 왜 한것인가?**
-        
-        운전자의 상황에 따라 각기 다른 운전자보험료를 보여주고싶은데, 그때
-        
-        사용자의 선택정보, 순위, 보험사, 가격등의 정보를 케이스별로 얻기 위해서.
-        
-        (보험다모아 사이트 크롤링을 진행함.)
-
-
-<br>
-
-**cf2)  Driver-Insurance-CrawlerSample프로젝트는 어떠한 툴을 사용해 개발했나?**
-        
-        이 프로젝트는 java를 이용해(spring 사용) 크롤링을 했으며
-        
-        jsoup 라이브러리를 이용하였음.
-        
-        - jsoup은 java html parser로써 데이터를 추출하고 조작하기 위해 사용하는 라이브러리,
-
-          DOM, CSS 구조를 이용, jquery와 비슷한 메서드를 가지고 있음.(HTML5 지원)
         
 
         
