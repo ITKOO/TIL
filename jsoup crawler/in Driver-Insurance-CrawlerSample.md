@@ -2,7 +2,7 @@
 
 # Driver-Insurance-CrawlerSample Repository
 
-- **Topic** : 운전자보험관련 정보 크롤링 
+- **Topic** : 보험관련 정보 크롤링 
 
 <br>
 
