@@ -4,9 +4,8 @@ TIL - Git
 
 # Git config 
 
--------------------------
 
-- Config 내용 확인하기
+- config 내용 확인하기
 
   git config --list
 
